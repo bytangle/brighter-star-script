@@ -26,6 +26,7 @@ firebase.analytics();
 const storage = firebase.storage();
 
 
+console.log(storage)
 
 
 // alert [type => alert-danger, alert-warning]

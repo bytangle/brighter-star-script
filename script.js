@@ -1,4 +1,4 @@
-
+const ENDPOINT = "https://brighter-star-studio-api.vercel.app";
 // initializations 
 
 new InputFile({
@@ -104,7 +104,7 @@ function uploadFiles() {
                     
                     newCoverRef.getDownloadURL().then(coverDownloadURL => {
                         // save data to db
-                        axios.post('http://localhost:3000/promote-music', 
+                        axios.post(`${ENDPOINT}/promote-music`, 
                             {
                                 _id : randomRef,
                                 phoneNumber : document.getElementById('phoneNumber').value,
@@ -155,7 +155,7 @@ uploadBtn.addEventListener('click', () => {
 
     showSpinner();
     // check if user is authorized to upload musics
-    axios.get(`http://localhost:3000/check-access-token`, {
+    axios.get(`${ENDPOINT}/check-access-token`, {
         params : {
             phoneNumber : document.getElementById('phoneNumber').value,
             token : document.getElementById('accessToken').value

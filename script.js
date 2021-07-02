@@ -78,8 +78,8 @@ function uploadFiles() {
 
     const randomRef = Math.floor(Math.random() * 99999999);
 
-    const newMusicRef = musicRef.child(`music/${randomRef}`);
-    const newCoverRef = imagesRef.child(`images/${randomRef}`)
+    const newMusicRef = musicRef.child(`music/${randomRef}.mp3`);
+    const newCoverRef = imagesRef.child(`images/${randomRef}.jpg`)
 
     // get both music and cover 
     let music = document.getElementsByClassName('music')[0]
